@@ -1,0 +1,2 @@
+/home/albert/code/AR/furniture-tutorial/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/home/albert/code/AR/furniture-tutorial/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt
