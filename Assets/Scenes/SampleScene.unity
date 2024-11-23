@@ -443,7 +443,7 @@ MonoBehaviour:
         m_MethodName: SwitchFurniture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2606406848853835271, guid: dc1f2bc048dadeb478693b30c01a9ce8,
+          m_ObjectArgument: {fileID: 1396718442724188, guid: 49bd04efa032c7d4c8bdc9a4a3e565ce,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -939,7 +939,7 @@ MonoBehaviour:
         m_MethodName: SwitchFurniture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2683126175790518071, guid: d7efbcab7e630fb4f9a01349288209a7,
+          m_ObjectArgument: {fileID: 1326291992456924, guid: 09dabaa0cfd2dc1459b62e793759baf2,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1072,7 +1072,7 @@ MonoBehaviour:
         m_MethodName: SwitchFurniture
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2290429128980147679, guid: 35a69f8bd3082ca47bb8aa0d0a31f444,
+          m_ObjectArgument: {fileID: 1172631373987382, guid: cd0dec594d983fb4e818009695f46b1c,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1262,7 +1262,7 @@ MonoBehaviour:
       m_Calls: []
   m_PlanePrefab: {fileID: 945826283598237317, guid: 1c34c9d6ab77ae8cfa521ce7e1ada35c,
     type: 3}
-  m_DetectionMode: -1
+  m_DetectionMode: 1
 --- !u!114 &2017144621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd31342f501be82cd81bd64089b64094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnableFurniture: {fileID: 2683126175790518071, guid: d7efbcab7e630fb4f9a01349288209a7,
+  SpawnableFurniture: {fileID: 1326291992456924, guid: 09dabaa0cfd2dc1459b62e793759baf2,
     type: 3}
   xrOrigin: {fileID: 2017144622}
   raycastManager: {fileID: 2017144619}

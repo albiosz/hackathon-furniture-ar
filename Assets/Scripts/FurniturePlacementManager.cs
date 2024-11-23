@@ -29,14 +29,14 @@ public class FurniturePlacementManager : MonoBehaviour
             if (Pointer.current.press.wasPressedThisFrame)
             {
                 Vector2 pointerPosition = Pointer.current.position.ReadValue();
-                bool collision = raycastManager.Raycast(pointerPosition, raycastHits, TrackableType.PlaneWithinPolygon);
+                bool collision = raycastManager.Raycast(pointerPosition, raycastHits, TrackableType.Planes);
 
                 if (collision && IsButtonPressed() == false)
                 {
                     // Instantiate the furniture object at the raycast hit position and rotation
                     GameObject _object = Instantiate(SpawnableFurniture);
                     _object.transform.position = raycastHits[0].pose.position;
-                    _object.transform.rotation = raycastHits[0].pose.rotation;
+                    _object.transform.rotation = Quaternion.Euler(-90, 0, 0);
 
                     Debug.Log("Object placed at: " + raycastHits[0].pose.position);
 
