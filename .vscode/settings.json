@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "furniture-tutorial.sln"
+    "dotnet.defaultSolution": "hackathon-furniture-ar.sln"
 }

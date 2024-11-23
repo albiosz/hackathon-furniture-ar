@@ -1,0 +1,1 @@
+C:\Users\Nils Petsch\Hackathon_AR_Furniture_v1\hackathon-furniture-ar\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\57po5dm5\obj\arm64-v8a

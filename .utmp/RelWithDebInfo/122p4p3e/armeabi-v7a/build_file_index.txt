@@ -1,0 +1,2 @@
+C:\Users\Nils Petsch\Hackathon_AR_Furniture_v1\hackathon-furniture-ar\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\Nils Petsch\Hackathon_AR_Furniture_v1\hackathon-furniture-ar\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

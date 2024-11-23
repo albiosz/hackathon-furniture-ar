@@ -1,0 +1,5 @@
+C:/Users/Nils Petsch/Hackathon_AR_Furniture_v1/hackathon-furniture-ar/.utmp/RelWithDebInfo/122p4p3e/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Nils Petsch/Hackathon_AR_Furniture_v1/hackathon-furniture-ar/.utmp/RelWithDebInfo/122p4p3e/arm64-v8a/CMakeFiles/rebuild_cache.dir
+C:/Users/Nils Petsch/Hackathon_AR_Furniture_v1/hackathon-furniture-ar/.utmp/RelWithDebInfo/122p4p3e/arm64-v8a/GameActivity/CMakeFiles/game.dir
+C:/Users/Nils Petsch/Hackathon_AR_Furniture_v1/hackathon-furniture-ar/.utmp/RelWithDebInfo/122p4p3e/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+C:/Users/Nils Petsch/Hackathon_AR_Furniture_v1/hackathon-furniture-ar/.utmp/RelWithDebInfo/122p4p3e/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

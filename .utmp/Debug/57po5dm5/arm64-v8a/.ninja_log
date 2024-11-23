@@ -1,0 +1,10 @@
+# ninja log v5
+84	4789	7540096441210653	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	23c35df4f1dc0a27
+102	4933	7540096441984584	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	29e598db931cd2d5
+42	4977	7540096442547970	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	ed110b8fefdb626c
+27	5017	7540096443759977	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	348f4e29bdc6cf93
+15	5118	7540096444547477	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	596a7deb13ebeeed
+68	5420	7540096445376295	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	53887be950066d7f
+55	5466	7540096447948327	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	f358e46edcd1275c
+1	5534	7540096450854134	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7b1c79902e380a87
+5534	6731	7540096461798040	C:/Users/Nils Petsch/Hackathon_AR_Furniture_v1/hackathon-furniture-ar/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/57po5dm5/obj/arm64-v8a/libgame.so	2b9be996f0f7b91

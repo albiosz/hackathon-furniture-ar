@@ -437,7 +437,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 369599143}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2017144624}
+        m_TargetAssemblyTypeName: FurniturePlacementManager, Assembly-CSharp
+        m_MethodName: SwitchFurniture
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2606406848853835271, guid: dc1f2bc048dadeb478693b30c01a9ce8,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &369599143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +933,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1521211028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2017144624}
+        m_TargetAssemblyTypeName: FurniturePlacementManager, Assembly-CSharp
+        m_MethodName: SwitchFurniture
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2683126175790518071, guid: d7efbcab7e630fb4f9a01349288209a7,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1521211028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1040,7 +1066,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1654547816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2017144624}
+        m_TargetAssemblyTypeName: FurniturePlacementManager, Assembly-CSharp
+        m_MethodName: SwitchFurniture
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2290429128980147679, guid: 35a69f8bd3082ca47bb8aa0d0a31f444,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1654547816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,8 +1321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd31342f501be82cd81bd64089b64094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnableFurniture: {fileID: 0}
-  sessionOrigin: {fileID: 0}
+  SpawnableFurniture: {fileID: 2683126175790518071, guid: d7efbcab7e630fb4f9a01349288209a7,
+    type: 3}
+  xrOrigin: {fileID: 2017144622}
   raycastManager: {fileID: 2017144619}
   planeManager: {fileID: 2017144620}
 --- !u!1660057539 &9223372036854775807
