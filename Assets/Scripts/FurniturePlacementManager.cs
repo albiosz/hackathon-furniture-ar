@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using Unity.XR.CoreUtils; // For XROrigin
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-
 using UnityEngine.InputSystem; // New Input System namespace
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -18,10 +16,12 @@ public class FurniturePlacementManager : MonoBehaviour
     public ARPlaneManager planeManager;
 
     private List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
+    private List<GameObject> placedFurnitureObjects = new List<GameObject>();  // Track multiple placed furniture objects
 
     private void Update()
     {
-        EnablePlanes(); 
+        EnablePlanes();
+
         // Check for pointer input using the New Input System
         if (Pointer.current != null && Pointer.current.press.isPressed)
         {
@@ -33,41 +33,34 @@ public class FurniturePlacementManager : MonoBehaviour
 
                 if (collision && IsButtonPressed() == false)
                 {
-                    // Instantiate the furniture object at the raycast hit position and rotation
-                    GameObject _object = Instantiate(SpawnableFurniture);
-                    _object.transform.position = raycastHits[0].pose.position;
-                    _object.transform.rotation = Quaternion.Euler(-90, 0, 0);
-
-                    Debug.Log("Object placed at: " + raycastHits[0].pose.position);
-
-                    // OPTIONAL: Disable planes after placing the object
-                    //DisablePlanes();
+                    PlaceFurniture();
                 }
             }
         }
     }
 
-    // Separate function to disable planes safely
-    private void DisablePlanes()
+    private void PlaceFurniture()
     {
-        if (planeManager.enabled)
-        {
-            foreach (var plane in planeManager.trackables)
-            {
-                plane.gameObject.SetActive(false); // Hide individual planes
-            }
-            planeManager.enabled = false; // Disable plane manager
-        }
+        // Instantiate the furniture object at the raycast hit position and rotation
+        GameObject _object = Instantiate(SpawnableFurniture);
+        _object.transform.position = raycastHits[0].pose.position;
+        _object.transform.rotation = Quaternion.Euler(-90, 0, 0);
+
+        // Add the placed object to the list
+        placedFurnitureObjects.Add(_object);
+
+        Debug.Log("Object placed at: " + raycastHits[0].pose.position);
     }
 
     private void EnablePlanes()
     {
         foreach (var plane in planeManager.trackables)
         {
-            plane.gameObject.SetActive(true); // Hide individual planes
+            plane.gameObject.SetActive(true); // Show individual planes
         }
-        planeManager.enabled = true; // Disable plane manager
+        planeManager.enabled = true; // Enable plane manager
     }
+
     public bool IsButtonPressed()
     {
         // Check if a UI button is currently being pressed
@@ -85,5 +78,18 @@ public class FurniturePlacementManager : MonoBehaviour
     {
         Debug.Log("Furniture switched successfully!");
         SpawnableFurniture = furniture;
+    }
+
+    // New method to clear furniture objects from last to first
+    public void ClearFurniture()
+    {
+        // Loop through the list in reverse to delete the last added objects
+        for (int i = placedFurnitureObjects.Count - 1; i >= 0; i--)
+        {
+            Destroy(placedFurnitureObjects[i]); // Destroy the object
+            placedFurnitureObjects.RemoveAt(i); // Remove the object from the list
+        }
+
+        Debug.Log("All placed furniture cleared.");
     }
 }
