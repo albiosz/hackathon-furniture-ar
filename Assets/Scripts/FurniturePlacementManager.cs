@@ -17,6 +17,7 @@ public class FurniturePlacementManager : MonoBehaviour
 
     private List<ARRaycastHit> raycastHits = new List<ARRaycastHit>();
     private List<GameObject> placedFurnitureObjects = new List<GameObject>();  // Track multiple placed furniture objects
+    private GameObject selectedFurniture; // To store the currently selected furniture for rotation
 
     private void Update()
     {
@@ -29,11 +30,20 @@ public class FurniturePlacementManager : MonoBehaviour
             if (Pointer.current.press.wasPressedThisFrame)
             {
                 Vector2 pointerPosition = Pointer.current.position.ReadValue();
-                bool collision = raycastManager.Raycast(pointerPosition, raycastHits, TrackableType.Planes);
 
-                if (collision && IsButtonPressed() == false)
+                if (IsButtonPressed() == false)
                 {
-                    PlaceFurniture();
+                  // Try to select furniture first
+                  if (!SelectFurnitureAtPosition(pointerPosition))
+                  {
+                    // If no furniture selected, try to place new furniture
+                    bool collision = raycastManager.Raycast(pointerPosition, raycastHits, TrackableType.Planes);
+
+                    if (collision)
+                    {
+                      PlaceFurniture();
+                    }
+                  }
                 }
             }
         }
@@ -80,8 +90,58 @@ public class FurniturePlacementManager : MonoBehaviour
         SpawnableFurniture = furniture;
     }
 
-    // New method to clear furniture objects from last to first
-    public void ClearFurniture()
+  // Method to select a furniture object at a given screen position
+  private bool SelectFurnitureAtPosition(Vector2 screenPosition)
+  {
+    Ray ray = Camera.main.ScreenPointToRay(screenPosition);
+    RaycastHit hit;
+
+    // Check if the ray hits any collider
+    if (Physics.Raycast(ray, out hit))
+    {
+      GameObject hitObject = hit.collider.gameObject;
+
+      // Check if the hit object is in the list of placed furniture
+      if (placedFurnitureObjects.Contains(hitObject))
+      {
+        selectedFurniture = hitObject;
+        Debug.Log("Selected furniture: " + hitObject.name);
+        return true;
+      }
+    }
+
+    // No furniture selected
+    selectedFurniture = null;
+    Debug.Log("No furniture selected.");
+    return false;
+  }
+
+  // Method to rotate the selected furniture object
+  private void RotateFurniture(float rotationAngle)
+  {
+    if (selectedFurniture != null)
+    {
+      selectedFurniture.transform.Rotate(Vector3.forward, rotationAngle);
+      Debug.Log($"Rotated {selectedFurniture.name} by {rotationAngle} degrees.");
+    }
+    else
+    {
+      Debug.LogWarning("No furniture selected for rotation.");
+    }
+  }
+
+  public void RotateFurnitureLeft()
+  {
+    RotateFurniture(-90);
+  }
+
+  public void RotateFurnitureRight()
+  {
+    RotateFurniture(90);
+  }
+
+  // New method to clear furniture objects from last to first
+  public void ClearFurniture()
     {
         // Loop through the list in reverse to delete the last added objects
         for (int i = placedFurnitureObjects.Count - 1; i >= 0; i--)
