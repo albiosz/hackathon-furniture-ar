@@ -140,6 +140,27 @@ public class FurniturePlacementManager : MonoBehaviour
     RotateFurniture(90);
   }
 
+  private void ChangeFurnitureScale(float scaleChange)
+  {
+    if (selectedFurniture == null)
+    {
+      return;
+    }
+
+    selectedFurniture.transform.localScale += new Vector3(scaleChange, scaleChange, scaleChange);
+    Debug.Log($"Changed {selectedFurniture.name} scale by {scaleChange}.");
+  }
+
+  public void ScaleFurnitureUp()
+  {
+    ChangeFurnitureScale(0.1f);
+  }
+
+  public void ScaleFurnitureDown()
+  {
+    ChangeFurnitureScale(-0.1f);
+  }
+
   // New method to clear furniture objects from last to first
   public void ClearFurniture()
   {
